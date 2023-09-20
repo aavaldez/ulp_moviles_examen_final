@@ -59,7 +59,6 @@ public class NotaAdapter extends RecyclerView.Adapter<NotaAdapter.ViewHolder> {
                 @Override
                 public void onClick(View view) {
                     Bundle bundle = new Bundle();
-                    Log.d("salida", nota.getText().toString());
                     bundle.putString("nota", nota.getText().toString());
                     Navigation.findNavController(view).navigate(R.id.notaFragment, bundle);
                 }

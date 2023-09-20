@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.a2valdez.ulp_moviles_examen_final.MainActivity;
+import com.a2valdez.ulp_moviles_examen_final.R;
 import com.a2valdez.ulp_moviles_examen_final.databinding.FragmentNotaBinding;
 
 public class NotaFragment extends Fragment {
@@ -42,7 +44,8 @@ public class NotaFragment extends Fragment {
         binding.btEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                mv.eliminarElemento(binding.tvNota.getText().toString());
+                Navigation.findNavController(view).navigate(R.id.nav_home, null);
             }
         });
         mv.obtenerResultado(getArguments());

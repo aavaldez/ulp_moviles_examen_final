@@ -35,10 +35,4 @@ public class HomeViewModel extends AndroidViewModel {
     public void setLista(){
         mLista.setValue(MainActivity.lista);
     }
-
-    public void eliminarElemento(int i){
-        int posicion = 1;
-        MainActivity.lista.remove(posicion);
-        mLista.setValue(MainActivity.lista);
-    }
 }
